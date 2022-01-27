@@ -1,11 +1,11 @@
 import { supabase } from "../utils/supabase";
 import Link from "next/link";
+import { useUser } from "../context/user";
 
 
 export default function Home({lessons}) {
-
-  console.log(supabase.auth.user())
-
+  const {user} = useUser();
+  console.log({user});
   return (
     <div className="w-full max-w-3xl mx-auto my-16 px-2">
       {lessons.map(lesson => (
