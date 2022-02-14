@@ -1,9 +1,11 @@
 import 'tailwindcss/tailwind.css';
 import UserProvider from "../context/user";
+import Nav from "../components/nav";
 
 function MyApp({ Component, pageProps }) {
   return (
     <UserProvider>
+      <Nav></Nav>
       <Component {...pageProps} />
     </UserProvider>    
   );
