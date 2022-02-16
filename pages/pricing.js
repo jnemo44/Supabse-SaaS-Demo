@@ -4,6 +4,11 @@ import { useUser } from "../context/user";
 const Pricing = ({ plans }) => {
     const { user, login, isLoading } = useUser();
     console.log(user);
+
+    const processSubscription = planId => async() = {
+        
+    }
+
     // !!user is if we have a user?
     const showSubscribeButton = !!user && !user.is_subscribed;
     const showCreateAccountButton = !user
@@ -18,7 +23,7 @@ const Pricing = ({ plans }) => {
                     </p>
                     {!isLoading && (
                         <div>
-                            {showSubscribeButton && <button>Subscribe</button>}
+                            {showSubscribeButton && <button onClick={processSubscription.planId}>Subscribe</button>}
                             {showCreateAccountButton && (
                                 <button onClick={login}>Create Account</button>
                             )}
