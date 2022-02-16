@@ -1,12 +1,14 @@
 import initStripe from 'stripe';
 import { useUser } from "../context/user";
+import axios from 'axios';
 
 const Pricing = ({ plans }) => {
     const { user, login, isLoading } = useUser();
     console.log(user);
 
-    const processSubscription = planId => async() = {
-        
+    const processSubscription = planId => async() => {
+        const { data } = await axios.get(`/api/subscription/${planId}`)
+        console.log(data)
     }
 
     // !!user is if we have a user?
