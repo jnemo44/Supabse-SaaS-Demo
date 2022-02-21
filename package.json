@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@stripe/stripe-js": "^1.23.0",
     "@supabase/supabase-js": "^1.28.5",
     "axios": "^0.26.0",
     "cookie": "^0.4.2",
