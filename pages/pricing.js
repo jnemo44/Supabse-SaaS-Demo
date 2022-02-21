@@ -25,16 +25,15 @@ const Pricing = ({ plans }) => {
                     </p>
                     {!isLoading && (
                         <div>
-                            {showSubscribeButton && <button onClick={processSubscription.planId}>Subscribe</button>}
+                            {showSubscribeButton && <button onClick={processSubscription(plan.id)}>Subscribe</button>}
                             {showCreateAccountButton && (
                                 <button onClick={login}>Create Account</button>
                             )}
-                            {showManageSubscriptionButton && <button>Manage Subscription</button>}
-                        </div>)
-                    }
-                    
-                    
-                    
+                            {showManageSubscriptionButton && (
+                                <button>Manage Subscription</button>
+                            )}
+                        </div>
+                    )}
                 </div>
             ))}
         </div>
